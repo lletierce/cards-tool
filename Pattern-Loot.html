@@ -1,0 +1,146 @@
+<!--
+Charte graphique 
+
+-1 Suivre exactement le screen du scan du manuel sauf dans les cas suivants : 
+
+-2 Pas de background pour la première Propriété.
+
+-3 Lorsqu'il y a plusieurs effets de Propriété ça reste dans le même div et le même intitulé "Propriété :". On fait un retour a la ligne juste après le "Propriété :". De plus on note un "♦" avec un retour a la ligne a chacune des nouvelles propriétés, si l'effet de propriété scale alors pas de "♦" et juste un retour à la ligne.
+
+-4 Lorsqu'un pouvoir ou propriété scale alors le "Niveau X :" doit être en italic mais pas l'effet en question
+
+-5 Le pouvoir doivent tous être présentés de la sorte "Pouvoir d'attaque/utilitaire (mots-clé par orde alphabétique sans majuscule si présent) ♦ Quotidien/Rencontre (Type d'acion).
+
+-6 Dans la description du pouvoir se fait après la mot clé "Effet : ", si un jet d'attaque doit être fait alors on parle de  "Attaque : " suivie de "Réussite : ", le mot clé "Déclencheur : " peut aussi être présent. Tout ces mots clé doivent être en italic.
+
+-7 Si plusieurs pouvoirs sont présent alors le premier à un background pas le deuxième puis le troisième a un background ect...
+
+-8 Faire attention que http://omnichron.net/external/op/src/bg_350.jpg charge bien
+
+-->
+
+
+<!--Exemple 1 Avec popriété, pouvoir et scaling-->
+
+<div style="font-family:arial;font-size:8pt;width:350px;line-height:10.5pt;">
+	<div style="background-color:#d89f34;color:#FFFFFF;padding:1px 5px 0px 5px;width:340px;height:16px;">
+		<div style="font-weight:bold;float:left;">Armure solaire</div>
+		<div style="float:right;">Niveau 7+</div>
+	</div>
+	<div style="background-color:#DDDDCC;background-image:url('http://omnichron.net/external/op/src/bg_350.jpg');font-style:italic;padding: 1px 0px 3px 5px;">Cette armure est recouverte de filament d'or et de runes vous permettant d'invoquer la chaleur du soleil.
+	</div>
+	<div style="padding-left:5px">
+		<span>Niv. 7</span><span style="padding-left: 11px">+2</span><span style="padding-left: 21px">2 600 po</span><span style="padding-left: 45px">Niv. 22</span><span style="padding-left: 5px">+5</span><span style="padding-left: 24px">325 000 po</span><br>
+		<span>Niv. 12</span><span style="padding-left: 5px">+3</span><span style="padding-left: 15px">13 000 po</span><span style="padding-left: 45px">Niv. 27</span><span style="padding-left: 5px">+6</span><span style="padding-left: 15px">1 625 000 po</span><br>
+		<span>Niv. 17</span><span style="padding-left: 5px">+4</span><span style="padding-left: 15px">65 000 po</span><br>
+		<span style="font-weight:bold;">Armes :</span><span> étoffe, cuir, peau</span><br>
+		<span style="font-weight:bold;">Altération : </span><span> CA</span><br>
+	</div>
+	<div style="padding-left:5px;">
+		<span style="font-weight:bold;">Propriété :</span> résistance radiante 5.
+	</div>
+	<div style="padding:0px 0px 0px 15px;">
+		<span style="font-style:italic;padding-left:">
+		 Niveau 17 ou 22 :</span> résistance radiante 10.<br>
+		 <span style="font-style:italic;padding-left:">
+		 Niveau 27 :</span> résistance radiante 15.<br>
+	</div>
+	<div style="padding-left:5px;background-image:url('http://omnichron.net/external/op/src/bg_350.jpg')">
+		<span style="font-weight:bold;">Pouvoir d'attaque (radiant)</span> ♦ <span style="font-weight:bold;">Quotidien (Action libre) </span> 
+	</div>
+	<div style="padding:0px 0px 0px 15px;background-image:url('http://omnichron.net/external/op/src/bg_350.jpg');">
+		<span style="font-style:italic">Déclencheur : </span> Un ennemi vous touche au moyen d'une attaque d'opportunité.<br>
+		<span style="font-style:italic">Effet : </span>Vous infligez à l'ennemi 1d10 + modificateur de Dextérité dégâts radiants.<br>
+		<span style="font-style:italic;padding-left:">Niveau 12 ou 17 :</span> 2d10 + modificateur de Dextérité dégâts radiants.<br>
+		<span style="font-style:italic;padding-left:">Niveau 22 ou 27 :</span> 3d10 + modificateur de Dextérité dégâts radiants.<br>
+	</div>
+	<br />
+</div>
+
+<!--Exemple 2 avec deux propriétés mais dans le même "Propriété : "-->
+
+<div style="font-family:arial;font-size:8pt;width:350px;line-height:10.5pt;">
+	<div style="background-color:#d89f34;color:#FFFFFF;padding:1px 5px 0px 5px;width:340px;height:16px;">
+		<div style="font-weight:bold;float:left;">Armure de sombre majesté</div>
+		<div style="float:right;">Niveau 4+</div>
+	</div>
+	<div style="background-color:#DDDDCC;background-image:url('http://omnichron.net/external/op/src/bg_350.jpg');font-style:italic;padding: 1px 0px 3px 5px;">Cette armure est garnie de clous en laiton étincelants qui scintillent avec des énergies infernales lorsque vous lancez un sort.
+	</div>
+	<div style="padding-left:5px">
+		<span>Niv. 4</span><span style="padding-left: 11px">+1</span><span style="padding-left: 30px">840 po</span><span style="padding-left: 45px">Niv. 19</span><span style="padding-left: 5px">+4</span><span style="padding-left: 24px">105 000 po</span><br>
+		<span>Niv. 9</span><span style="padding-left: 11px">+2</span><span style="padding-left: 21px">4 200 po</span><span style="padding-left: 45px">Niv. 24</span><span style="padding-left: 5px">+5</span><span style="padding-left: 24px">525 000 po</span><br>
+		<span>Niv. 14</span><span style="padding-left: 5px">+3</span><span style="padding-left: 15px">21 000 po</span><span style="padding-left: 45px">Niv. 29</span><span style="padding-left: 5px">+6</span><span style="padding-left: 15px">2 625 000 po</span><br>
+		<span style="font-weight:bold;">Armure :</span><span> cuir, peau</span><br>
+		<span style="font-weight:bold;">Alétration : </span><span> CA</span><br>
+	</div>
+	<div style="padding-left:5px;">
+		<span style="font-weight:bold;">Propriété :</span>
+	</div>
+	<div style="padding:0px 0px 0px 15px;">
+		<span style="font-weight:bold;">♦</span>
+		 Vous gagnez un bonus d'objet aux jets de Bluffs et d'Intimidations égal au bonus d'altération de cette armure.<br>
+		 <span style="font-weight:bold;">♦</span>
+		 Vous gagnez un bonus d'objet de +2 à toutes vos défenses contre un ennemi sous votre Envoûtement.
+	</div>
+	<div style="padding-left:5px;background-image:url('http://omnichron.net/external/op/src/bg_350.jpg');">
+		<span style="font-weight:bold;">Pouvoir utilitaire</span> ♦ <span style="font-weight:bold;">Quotidien (Action mineure) </span> 
+	</div>
+	<div style="padding:0px 0px 0px 15px;background-image:url('http://omnichron.net/external/op/src/bg_350.jpg');">
+		<span style="font-style:italic"> Effet : </span>Vous pouvez soumettre à votre Envoûtement n'importe quel ennemi que vous voyez à la place de l'ennemi le plus proche.<br>
+	</div>
+	<br />
+</div>
+
+
+<!--Exemple 3 avec "Attaque : " suivie de "Réussite :-->
+
+<div style="font-family:arial;font-size:8pt;width:350px;line-height:10.5pt;">
+	<div style="background-color:#d89f34;color:#FFFFFF;padding:1px 5px 0px 5px;width:340px;height:16px;">
+		<div style="font-weight:bold;float:left;">Armure de carapace de scorpion</div>
+		<div style="float:right;">Niveau 4+</div>
+	</div>
+	<div style="background-color:#DDDDCC;background-image:url('http://omnichron.net/external/op/src/bg_350.jpg');font-style:italic;padding: 1px 0px 3px 5px;">L'esprit du scorpion réside dans cette armure segmentée.
+	</div>
+	<div style="padding-left:5px">
+		<span>Niv. 4</span><span style="padding-left: 11px">+1</span><span style="padding-left: 30px">840 po</span><span style="padding-left: 45px">Niv. 19</span><span style="padding-left: 5px">+4</span><span style="padding-left: 24px">105 000 po</span><br>
+		<span>Niv. 9</span><span style="padding-left: 11px">+2</span><span style="padding-left: 21px">4 200 po</span><span style="padding-left: 45px">Niv. 24</span><span style="padding-left: 5px">+5</span><span style="padding-left: 24px">525 000 po</span><br>
+		<span>Niv. 14</span><span style="padding-left: 5px">+3</span><span style="padding-left: 15px">21 000 po</span><span style="padding-left: 45px">Niv. 29</span><span style="padding-left: 5px">+6</span><span style="padding-left: 15px">2 625 000 po</span><br>
+		<span style="font-weight:bold;">Armure :</span><span> écailles</span><br>
+		<span style="font-weight:bold;">Altération : </span><span>CA</span><br>
+	</div>
+	<div style="padding-left:5px">
+		<span style="font-weight:bold;">Propriété : </span>Les créatures avec une perception des vibrations doivent avoir une ligne de vue pour vous détecter.<br>
+	</div>
+	<div style="padding-left:5px;background-image:url('http://omnichron.net/external/op/src/bg_350.jpg')">
+		<span style="font-weight:bold;">Pouvoir d'attaque (poison)</span> ♦ <span style="font-weight:bold;">Quotidien (Interruption immédiate)</span> 
+	</div>
+	<div style="padding:0px 0px 0px 15px;background-image:url('http://omnichron.net/external/op/src/bg_350.jpg');">
+		<span style="font-style:italic">Déclencheur : </span> Un ennemi adjacent à vous se déplace volontairement.<br>
+		<span style="font-style:italic">Attaque : </span> Corps à corps 1 (l'ennemi déclencheur); Votre niveau +4 contre Réflexes <br>
+		<span style="font-style:italic">Réussite : </span> 5 dégâts de poison et la cible est immobilisée jusqu'à la fin de votre tour de jeu suivant.<br>
+		<span style="font-style:italic;padding-left:">Niveau 14 ou 19 :</span> 10 dégâts de poison.<br>
+		<span style="font-style:italic;padding-left:">Niveau 24 ou 29 :</span> 10 dégâts de poison.<br>
+	</div>
+	<br/>
+</div>
+
+<!--Exemple 4 sans pouvoir-->
+
+<div style="font-family:arial;font-size:8pt;width:350px;line-height:10.5pt;">
+	<div style="background-color:#d89f34;color:#FFFFFF;padding:1px 5px 0px 5px;width:340px;height:16px;">
+		<div style="font-weight:bold;float:left;">Marcheurs des limons</div>
+		<div style="float:right;">Niveau 12</div>
+	</div>
+	<div style="background-color:#DDDDCC;background-image:url('http://omnichron.net/external/op/src/bg_350.jpg');font-style:italic;padding: 1px 0px 3px 5px;">Semelle lisse et aérée pour plus de confort, ces chaussures fines sont tissées à partir de fibres vitreuses.
+	</div>
+	<div style="padding-left:5px">
+		<span style="font-weight:bold;">Emplacement d'objet :</span><span> pieds</span><span style="padding-left: 15px">13 000 po</span><br>
+	</div>
+	<div style="padding-left:5px">
+		<span style="font-weight:bold;">Propriété : </span>Vous bénéficiez d'un bonus d'objet de +1 à la vitesse de
+	</div>
+	<div style="padding:0px 0px 0px 15px;"> déplacement. Vous ignorez les terrains difficiles dus à la terre, au sable ou à la vase. Vous ne laissez pas de traces sur ces terrains. De plus, vous pouvez vous déplacer et vous tenir debout sur des surfaces horizontales non solides (comme la vase ou l'eau) comme s'il s'agissait d'un terrain solide.
+		<br>
+	</div>
+	<br />
+</div>
