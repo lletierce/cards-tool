@@ -1,7 +1,9 @@
+import ItemPage from "./pages/ItemPage";
+
 function App() {
   return (
     <div>
-      App
+      <ItemPage />
     </div>
   );
 }
