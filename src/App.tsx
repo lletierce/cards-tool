@@ -1,9 +1,11 @@
-import ItemPage from "./pages/ItemPage";
+import ExampleForm from "./components/item/ExampleForm";
+import Wondrous from "./components/item/wondrous/Wondrous";
 
 function App() {
   return (
     <div>
-      <ItemPage />
+      <Wondrous/>
+      {/* <ExampleForm/> */}
     </div>
   );
 }
