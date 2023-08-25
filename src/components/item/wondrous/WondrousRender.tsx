@@ -1,29 +1,27 @@
+import { useContext } from "react";
 import styled from "styled-components";
+import { WondrousContext } from "../../../context/WondrousContext";
 
 export default function WondrousRender() {
+  // state
+  const { wondrousName, wondrousLevel, wondrousDescription, wondrousPrice, wondrousProperty } =
+    useContext(WondrousContext);
+
   return (
     <WondrousRenderStyled>
       <div className="header">
-        <span>Poche d'herbes infinies</span>
-        <span className="level">Niveau 14 Rare</span>
+        <span>{wondrousName}</span>
+        <span className="level">Niveau {wondrousLevel}</span>
       </div>
-      <div className="description">
-        Cette poche contient une petite quantité infinie de racines d'arbres, de
-        feuilles et de mousses rares récoltées durant certaines phases lunaires.
-      </div>
+      <div className="description">{wondrousDescription}</div>
       <div className="type">
         <span className="typeName">Objet merveilleux</span>
-        <span className="price">21 000 po</span>
+        <span className="price">{Intl.NumberFormat('fr-FR').format(wondrousPrice)} po</span>
       </div>
       <div className="property">
         <span className="propertyLabel">Propriété : </span>
         <p className="propertyText">
-          A la fin de chaque repos long, des herbes rares d'une valeur de 50 pièces
-          d'or apparaissent dans la poche. La poche peut contenir jusqu'à un maximum
-          de 700 pièces d'or d'herbres rares. Ces herbres peuvent être utilisées pour exécuter
-          des rituels nécessitant un test de nature et n'étant pas des rituels de création. Les 
-          herbres rares disparaissent peu de temps après la sortie de la poche si elle ne 
-          sont pas utilisée comme composants de rituels. 
+          {wondrousProperty}
         </p>
       </div>
     </WondrousRenderStyled>
@@ -53,7 +51,7 @@ const WondrousRenderStyled = styled.div`
 
   .description {
     background-color: #ddddcc;
-    background-image:url('http://omnichron.net/external/op/src/bg_350.jpg');
+    background-image: url("http://omnichron.net/external/op/src/bg_350.jpg");
     font-style: italic;
 
     padding: 1px 0px 3px 5px;
@@ -74,11 +72,11 @@ const WondrousRenderStyled = styled.div`
   .property {
     padding-left: 5px;
     background-color: #ddddcc;
-    background-image:url('http://omnichron.net/external/op/src/bg_350.jpg');
+    background-image: url("http://omnichron.net/external/op/src/bg_350.jpg");
 
     .propertyLabel {
-        font-weight: bold;
-      }
+      font-weight: bold;
+    }
 
     .propertyText {
       padding-left: 15px;
