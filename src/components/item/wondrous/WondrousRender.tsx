@@ -1,29 +1,50 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import styled from "styled-components";
 import { WondrousContext } from "../../../context/WondrousContext";
+import { toPng } from 'html-to-image';
+
 
 export default function WondrousRender() {
   // state
   const { wondrousName, wondrousLevel, wondrousDescription, wondrousPrice, wondrousProperty } =
     useContext(WondrousContext);
 
+  const elementRef = useRef(null);
+
+  // comportement
+  const htmlToImageConvert = () => {
+    toPng(elementRef.current!, { cacheBust: false })
+      .then((dataUrl) => {
+        const link = document.createElement("a");
+        link.download = "my-image-name.png";
+        link.href = dataUrl;
+        link.click();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <WondrousRenderStyled>
-      <div className="header">
-        <span>{wondrousName}</span>
-        <span className="level">Niveau {wondrousLevel}</span>
+      <div ref={elementRef}>
+        <div className="header">
+          <span>{wondrousName}</span>
+          <span className="level">Niveau {wondrousLevel}</span>
+        </div>
+        <div className="description">{wondrousDescription}</div>
+        <div className="type">
+          <span className="typeName">Objet merveilleux</span>
+          <span className="price">{Intl.NumberFormat('fr-FR').format(wondrousPrice)} po</span>
+        </div>
+        <div className="property">
+          <span className="propertyLabel">Propriété : </span>
+          <p className="propertyText">
+            {wondrousProperty}
+          </p>
+        </div>
       </div>
-      <div className="description">{wondrousDescription}</div>
-      <div className="type">
-        <span className="typeName">Objet merveilleux</span>
-        <span className="price">{Intl.NumberFormat('fr-FR').format(wondrousPrice)} po</span>
-      </div>
-      <div className="property">
-        <span className="propertyLabel">Propriété : </span>
-        <p className="propertyText">
-          {wondrousProperty}
-        </p>
-      </div>
+      <button className='cta-save' onClick={htmlToImageConvert}>Enregistrer</button>
     </WondrousRenderStyled>
   );
 }
@@ -59,6 +80,7 @@ const WondrousRenderStyled = styled.div`
 
   .type {
     padding-left: 5px;
+    background: #FFFFFF;
 
     .typeName {
       font-weight: bold;

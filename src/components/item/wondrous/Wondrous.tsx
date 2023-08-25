@@ -33,7 +33,6 @@ export default function Wondrous() {
         <WondrousForm />
         <div className='render'>
             <WondrousRender />
-            <button className='cta-save'>Enregistrer</button>
         </div>
     </WondrousStyled>
     </WondrousContext.Provider>
