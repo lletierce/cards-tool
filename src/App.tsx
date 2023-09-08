@@ -1,10 +1,11 @@
-import ItemPage from "./pages/ItemPage";
+// import ItemPage from "./pages/ItemPage";
+import PowerPage from "./pages/PowerPage";
 
 
 function App() {
   return (
     <div>
-      <ItemPage />
+      <PowerPage />
     </div>
   );
 }
