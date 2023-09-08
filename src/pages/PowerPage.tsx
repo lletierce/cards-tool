@@ -31,7 +31,7 @@ export default function PowerPage() {
           <span>Réussite :</span>{" "}
           <span className="value">{SAMPLE_HIT_DESCRIPTION}</span>
         </div>
-        <div>Effect, Echec, Special, ...</div>
+        {/* <div>Effect, Echec, Special, ...</div> */}
       </div>
     </PowerPageStyled>
   );
